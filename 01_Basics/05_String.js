@@ -81,6 +81,14 @@ console.log(repeatedString);
 
 
 
+const crazyName = "A,M,O,N,J,I";
+
+let t = crazyName.split(',').join('-');
+
+console.log(t)
+
+
+
 
 
 
