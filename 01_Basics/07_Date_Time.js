@@ -27,10 +27,35 @@
 // let myTimeStamp =  Date.now()
 // console.log(Math.floor(myTimeStamp.toLocaleString()))
 
+let myTimeStamp = Date.now();
+let date = new Date(myTimeStamp);
+console.log(date.toLocaleString("en-IN"));
+
+
+// let newLOOkingdate = new Date();
+// console.log(newLOOkingdate)
+// console.log(newLOOkingdate.getDate())
+// console.log(newLOOkingdate.getDay())
+// console.log(newLOOkingdate.getMonth())
+// console.log(newLOOkingdate.getFullYear())
+
+
+// console.log(`time ${newLOOkingdate.toLocaleString("en-IN", {
+//     hour12:true,
+//     hour: "numeric",
+//     minute: "numeric",
+// })} Date:- ${newLOOkingdate.getDate()} /${newLOOkingdate.getMonth()+1} /${newLOOkingdate.getFullYear()}                                                               
+
+// `)
 
 let newLOOkingdate = new Date();
-console.log(newLOOkingdate)
-console.log(newLOOkingdate.getDate())
-console.log(newLOOkingdate.getDay())
-console.log(newLOOkingdate.getMonth())
-console.log(newLOOkingdate.getFullYear())
+
+console.log(
+  `Time: ${newLOOkingdate.toLocaleString("en-IN", {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true
+  })} | Day: ${newLOOkingdate.toLocaleString("en-IN", {
+    weekday: "long"
+  })} | Date: ${newLOOkingdate.getDate()}/${newLOOkingdate.getMonth() + 1}/${newLOOkingdate.getFullYear()}`
+);
