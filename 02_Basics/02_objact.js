@@ -6,14 +6,14 @@
 const mySym = Symbol("key1")
 
 const JsUser = {
-     name:'Aman' ,
-     age:18,
-     address:'Jaipur',
-     email:'aman@google.com',
-     [mySym]: mySym,
-     lastLoginDay:['Monday','Suterday'],
-     'my favename':'Aoan'
-     
+    name: 'Aman',
+    age: 18,
+    address: 'Jaipur',
+    email: 'aman@google.com',
+    [mySym]: mySym,
+    lastLoginDay: ['Monday', 'Suterday'],
+    'my favename': 'Aoan'
+
 };
 
 
@@ -22,16 +22,55 @@ const JsUser = {
 console.log(JsUser.name);
 console.log(JsUser['address']); // this is very importent
 console.log(JsUser.name);
-console.log( JsUser[mySym]);
+console.log(JsUser[mySym]);
 console.log(JsUser['my favename']);
 
 
 JsUser.name = 'Amonji';
 
-Object.freeze(JsUser);// this mathord not showing error but you canot change values
+// Object.freeze(JsUser);// this mathord not showing error but you canot change values
 
 JsUser.name = 'Amon';
 
 console.log(JsUser.name);
 
 
+JsUser.greating = function () {
+    console.log('tari ma kaa bhosda fad da gi ' + `   ${this['my favename']}`)
+}
+
+console.log(JsUser);
+console.log(JsUser.greating());
+
+
+
+//singolton objacts
+
+// const tinderUser = new Object();
+const tinderUser = {};
+
+tinderUser.id = '123@abx'
+tinderUser.name = 'kundan'
+tinderUser.isLoggedIn = false;
+console.log(tinderUser);
+
+const ragulerUser = {
+    email: 'kundan@google123.com',
+    fullName: {
+        usernameFullname: {
+             firstname:'kandpail',
+             lastname:'choresiya'
+        }
+
+    }
+
+}
+
+console.log(ragulerUser.fullName.usernameFullname.lastname);
+
+const Obj1 = {1:'a' , 2:'b'};
+const Obj2 = {3:'a' , 4:'b'};
+const Obj3 = Object.assign(Obj1,Obj2);
+const Obj4 = {...Obj1 , ...Obj2};
+console.log(Obj4)
+console.log(Obj3);
