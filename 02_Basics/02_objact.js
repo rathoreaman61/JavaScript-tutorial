@@ -58,8 +58,8 @@ const ragulerUser = {
     email: 'kundan@google123.com',
     fullName: {
         usernameFullname: {
-             firstname:'kandpail',
-             lastname:'choresiya'
+            firstname: 'kandpail',
+            lastname: 'choresiya'
         }
 
     }
@@ -68,9 +68,39 @@ const ragulerUser = {
 
 console.log(ragulerUser.fullName.usernameFullname.lastname);
 
-const Obj1 = {1:'a' , 2:'b'};
-const Obj2 = {3:'a' , 4:'b'};
-const Obj3 = Object.assign(Obj1,Obj2);
-const Obj4 = {...Obj1 , ...Obj2};
+const Obj1 = { 1: 'a', 2: 'b' };
+const Obj2 = { 3: 'a', 4: 'b' };
+const Obj3 = Object.assign(Obj1, Obj2);
+const Obj4 = { ...Obj1, ...Obj2 };
 console.log(Obj4)
 console.log(Obj3);
+
+
+let user = [
+    {
+        id: 1,
+        email: 'a@gmail.com'
+    }
+
+
+]
+
+
+console.log(tinderUser);
+console.log(Object.keys(tinderUser));
+console.log(Object.values(tinderUser));
+console.log(Object.entries(tinderUser));
+
+console.log(tinderUser.hasOwnProperty('kundan'));
+
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "hitesh"
+}
+
+console.log(course.courseInstructor)
+const {courseInstructor} = course;
+console.log(courseInstructor);
+const {courseInstructor: instructor} = course;
+console.log(instructor);
