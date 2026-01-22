@@ -45,3 +45,15 @@ function calculateCartPrice(value1,value2,...values){               //this is ca
 }
 
 console.log(calculateCartPrice(100,200,300,400,500));
+
+
+
+const user = {
+    userName:"Aman",
+    Price:99
+}
+
+function handalObjact (anyobjact) {
+    console.log(`Usename is ${anyobjact.userName} and price is ${anyobjact.Price}`)
+}
+
