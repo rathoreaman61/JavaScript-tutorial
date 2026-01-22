@@ -39,21 +39,24 @@ function loginUserMessage(username = "sam"){
 // console.log(loginUserMessage("hitesh"))
 
 
-function calculateCartPrice(value1,value2,...values){               //this is called rest oprator
+function calculateCartPrice(value1,value2,...values){                               //thats called rest oprator
     console.log(`value1 = ${value1}, value2 ${value2}, values :- ${values}`)
     return values;
 }
 
-console.log(calculateCartPrice(100,200,300,400,500));
+console.log(calculateCartPrice(100,200,300,400,500)) ;
 
-
-
-const user = {
-    userName:"Aman",
-    Price:99
-}
+// const userName = {
+//     user:"Aman",
+//     Price:99
+// }
 
 function handalObjact (anyobjact) {
     console.log(`Usename is ${anyobjact.userName} and price is ${anyobjact.Price}`)
 }
 
+// handalObjact(user);
+
+handalObjact(   {user:"Aman",
+  Price:99}
+)
