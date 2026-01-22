@@ -57,6 +57,7 @@ function handalObjact (anyobjact) {
 
 // handalObjact(user);
 
-handalObjact(   {user:"Aman",
+handalObjact(   {userName:"Aman",
   Price:99}
 )
+
