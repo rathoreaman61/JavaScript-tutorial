@@ -61,3 +61,11 @@ handalObjact(   {userName:"Aman",
   Price:99}
 )
 
+let myNewarray = [100,200,300,400];
+
+function returnSecoundValue() {
+    return myNewarray[0]
+}
+
+// returnSecoundValue(myNewarray)
+returnSecoundValue([100,200,300,400])
