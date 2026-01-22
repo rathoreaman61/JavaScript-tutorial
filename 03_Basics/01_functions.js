@@ -39,8 +39,9 @@ function loginUserMessage(username = "sam"){
 // console.log(loginUserMessage("hitesh"))
 
 
-function calculateCartPrice(value1,value2,...values){
+function calculateCartPrice(value1,value2,...values){               //this is called rest oprator
+    console.log(`value1 = ${value1}, value2 ${value2}, values :- ${values}`)
     return values;
 }
 
-console.log(calculateCartPrice());
+console.log(calculateCartPrice(100,200,300,400,500));
