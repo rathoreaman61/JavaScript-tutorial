@@ -10,4 +10,12 @@ let person = {
     isWorking: true
 };
 
-console.log(person);
+
+for (let key of Object.keys(person)) {
+    console.log(key, person[key]);
+}
+
+for (const [key, value] of Object.entries(person)) {
+    console.log(key, value);
+}
+
