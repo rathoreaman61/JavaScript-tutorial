@@ -8,3 +8,4 @@ console.log(mapMethod)
 mapMethod = mapMethod.filter((value)=>(value >= 40));
 console.log('_______________mapMethod______________')
 console.log(mapMethod);
+///////////////
