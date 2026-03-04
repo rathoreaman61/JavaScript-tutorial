@@ -298,3 +298,57 @@ setInterval(()=>{
 </html>
 
 ```
+
+```html
+const randomNumber = parseInt(Math.random ()* 100 + 1 );
+
+const userInput = document.querySelector('#guessField');
+
+const submit = document.querySelector('#subt');
+
+const guessSlot = document.querySelector('.guesses');
+
+const remaining = document.querySelector('.lastResult');
+
+const loworHi = document.querySelector('.lowOrHi');
+
+const startover = document.querySelector('.resultParas');
+
+const p = document.createElement('p')
+
+let prevGuess = []
+
+let theNumberOfGuss = 1;
+
+let playgame = true;
+
+if(playgame){
+submit.addEventListener('clcik',(e)=>{
+e.preventDefault()
+const guess = parseInt(userInput.value);
+validguess(guess)
+})
+}
+
+
+function validguess(){
+  if(userInput < 0 || isNaN(userInput) ||  userInput < 100){
+    alert('PLease enter a valid number')
+  }else{
+    prevGuess.push(guess)
+  }
+}
+  function checkGuess (guess){
+  
+  }
+  function displayMessage(guess){
+
+  }
+
+  function endGame(){
+  }
+
+  function newGame() {
+  } //
+  
+```
