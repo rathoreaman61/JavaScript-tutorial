@@ -352,3 +352,87 @@ function validguess(){
   } //
   
 ```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background-color: rgb(39, 36, 36);
+            color: aliceblue;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .box {
+            background-color: aqua;
+            height: 500px;
+            width: 500px;
+            align-self: center;
+            display: flex;
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 100px;
+            padding-bottom: 20px;
+
+        }
+      .box p { 
+        align-self: center;
+        margin: auto;
+        background-color: transparent;
+        color: black;
+
+      }
+    </style>
+</head>
+
+<body>
+    <h1>Color Changing button</h1>
+    <div class="container">
+        <div class="box">
+            <p style="border-color: black;">Click Me</p>
+        </div>
+    </div>
+
+
+
+</body>
+<script>
+   const colorsChangingbox = document.querySelector('.box');
+   const h1 = document.querySelector('h1');
+   const p = document.querySelector('p');
+   colorsChangingbox.addEventListener('click',function () {
+    const colorbox = document.querySelector('.box')
+    const colorProvierVariable = getColor();
+    h1.innerText = colorProvierVariable;
+    colorsChangingbox.style.backgroundColor = colorProvierVariable;
+    p.remove();
+   })
+
+
+     function getColor() {
+        const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+    let rgb = `rgb(${red},${green},${blue})`
+    return rgb;
+     }
+
+
+</script>
+
+</html>
+```
