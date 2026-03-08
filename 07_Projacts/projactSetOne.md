@@ -415,7 +415,6 @@ function validguess(){
    const h1 = document.querySelector('h1');
    const p = document.querySelector('p');
    colorsChangingbox.addEventListener('click',function () {
-    const colorbox = document.querySelector('.box')
     const colorProvierVariable = getColor();
     h1.innerText = colorProvierVariable;
     colorsChangingbox.style.backgroundColor = colorProvierVariable;
