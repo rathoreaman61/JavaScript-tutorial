@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: black;color: aliceblue;">
+    <h1>Code Crafter Aman</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+
+</body>
+<script>
+
+    const sayMyname = () => {
+        document.querySelector('h1').innerHTML = 'best JS serise';
+        console.log('best JS serise')
+    }
+
+    const stopman = setInterval(sayMyname, 2000);
+
+     const stopIT = document.getElementById('stop');
+
+     stopIT.addEventListener('click',()=>{
+        clearInterval(stopman);
+        console.log('stopped');
+     })
+   
+    const startIt = document.getElementById('start');
+
+    startIt.addEventListener('click',()=>{
+        console.log('start')
+        setTimeout(startEvent,2000);
+        function startEvent() {
+            document.querySelector('h1').innerHTML = 'the best JS serise';
+        
+        }
+    }
+    )
+   
+
+
+</script>
+
+</html>
