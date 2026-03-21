@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       /* parent */
+/* parent */
+/* parent card */
+div {
+  overflow: hidden;
+  transition: transform 0.3s ease; /* यहीं होना चाहिए */
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* hover पर पूरा card scale होगा */
+div:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 4px 5px 2px gray;
+}
+    </style>
+</head>
+
+<body style="background-color: black;">
+ <div style="height: 500px; background-color: white;width: 400px;border-radius: 780px;"> <img src="" alt="" style="width: 100%; height: 100%;object-fit:cover;border-radius: 20px 20px 1px 1px;"></div>   
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+
+            const data = JSON.parse(this.responseText);
+            console.log(data);
+            console.log(data.followers);
+            
+
+
+
+            // use करना
+            document.querySelector("img").src = data.avatar_url;
+        }
+    }
+    xhr.send();
+
+    // API से data आने के बाद
+
+
+    // image url निकालना
+
+</script>
+
+</html>
